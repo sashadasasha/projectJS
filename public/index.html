@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+</head>
+
+<body>
+<div id="app">
+    <header class="header">
+        <div class="container header__container">
+            <div class="header__left">
+                <a href="#" class="logo"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span class="logo__d">D</span></a>
+                <form class="header__form" action="#">
+                    <div class="browse"><details class="browse__details">
+                            <summary class="browse__summary">
+                                Browse
+                                <i class="fas fa-sort-down"></i>
+                            </summary>
+                            <div class="browse__details-drop-down">
+                                <div class="browse__details-drop-down-triangle"></div>
+                                <ul class="browse__details-drop-down-list">
+                                    <li class="browse__details-drop-down-list-el browse__details-drop-down-list-el_heading">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">woman</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Dresses</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Tops</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Sweaters/Knits</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Jackets/Coats</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Blazers</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Denim</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Leggings/Pants</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Skirts/Shorts</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Accessories</a>
+                                    </li>
+                                </ul>
+                                <ul class="browse__details-drop-down-list">
+                                    <li class="browse__details-drop-down-list-el browse__details-drop-down-list-el_heading">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">men</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Tees/Tank tops</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Shirts/Polos</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Sweaters</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Sweatshirts/Hoodies</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Blazers</a>
+                                    </li>
+                                    <li class="browse__details-drop-down-list-el">
+                                        <a href="html/product.html" class="browse__details-drop-down-link">Jackets/vests</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </details></div>
+                    <input type="text" class="frame" placeholder="Search for Item...">
+                    <button class="buttonBrowse" type="submit"><img alt="search" src="img/searchIcon.png"></button>
+                </form>
+            </div>
+            <div class="header__right">
+                    <div class="cart__container">
+                            <div class="cart__link-container">
+                                <a href="cart.html" class="cart__link">
+                                    <img src="img/cart.svg" alt="cart" class="cart__btn-img">
+                                </a>
+                            </div>
+                            <div class="cart__product-counter">0</div>
+                            <div class="cart">
+                                <div class="cart__triangle"></div>
+                                <div class="cart__products"></div>
+                                <div class="cart__total">
+                                    <p>total</p>
+                                    <p class="cart__total-numbers">$00.00</p>
+                                </div>
+                                <div class="cart__buttons">
+                                    <button class="cart__button"><a href="checkout.html">Checkout</a></button>
+                                    <button class="cart__button">Go to cart</button>
+                                </div>
+                            </div>
+                        </div>
+                <a class="button" href="#">My Account</a>
+            </div>
+        </div>
+    </header>
+    <nav class="nav container">
+            
+                <ul class="nav__menu">
+                    <li class="nav__menuItem"><a href="index.html" class="nav__link">Home</a></li>
+                    <li class="nav__menuItem"><a href="product.html" class="nav__link">Man</a>
+                        <div class="nav__menuHidden">
+                            <div class="nav__menuHidden-triangle"></div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Blazers</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Denim</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Leggings/Pants</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Skirts/Shorts</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <div class="nav__menuHidden-img-block">
+                                    <img src="img/hidden_menu.png" alt="super sale">
+                                    <div class="nav__menuHidden-img-block-text">Super<br>sale!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__menuItem"><a href="single_page.html" class="nav__link">Women</a>
+                        <div class="nav__menuHidden">
+                            <div class="nav__menuHidden-triangle"></div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Blazers</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Denim</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Leggings/Pants</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Skirts/Shorts</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <div class="nav__menuHidden-img-block">
+                                    <img src="img/hidden_menu.png" alt="super sale">
+                                    <div class="nav__menuHidden-img-block-text">Super<br>sale!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__menuItem"><a href="product.html" class="nav__link">Kids</a>
+                        <div class="nav__menuHidden">
+                            <div class="nav__menuHidden-triangle"></div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Blazers</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Denim</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Leggings/Pants</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Skirts/Shorts</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <div class="nav__menuHidden-img-block">
+                                    <img src="img/hidden_menu.png" alt="super sale">
+                                    <div class="nav__menuHidden-img-block-text">Super<br>sale!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__menuItem"><a href="product.html" class="nav__link">Accoseriese</a>
+                        <div class="nav__menuHidden">
+                            <div class="nav__menuHidden-triangle"></div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Blazers</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Denim</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Leggings/Pants</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Skirts/Shorts</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <div class="nav__menuHidden-img-block">
+                                    <img src="img/hidden_menu.png" alt="super sale">
+                                    <div class="nav__menuHidden-img-block-text">Super<br>sale!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__menuItem"><a href="product.html" class="nav__link">Featured</a>
+                        <div class="nav__menuHidden">
+                            <div class="nav__menuHidden-triangle"></div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Blazers</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Denim</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Leggings/Pants</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Skirts/Shorts</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <div class="nav__menuHidden-img-block">
+                                    <img src="img/hidden_menu.png" alt="super sale">
+                                    <div class="nav__menuHidden-img-block-text">Super<br>sale!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li class="nav__menuItem"><a href="product.html" class="nav__link">Hot Deals</a>
+                        <div class="nav__menuHidden">
+                            <div class="nav__menuHidden-triangle"></div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Blazers</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Denim</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Leggings/Pants</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Skirts/Shorts</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Accessories</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                </ul>
+                            </div>
+                            <div class="nav__menuHidden-block">
+                                <ul class="nav__menuHidden-list">
+                                    <li class="nav__menuHidden-list-elem">
+                                        <h4 class="nav__menuHidden-headline">woman</h4></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Dresses</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Tops</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Sweaters/Knits</a></li>
+                                    <li class="nav__menuHidden-list-elem"><a href="product.html" class="nav__menuHidden-link">
+                                        Jackets/Coats</a></li>
+                                    <li class="nav__menuHidden-list-elem">
+                                </ul>
+        
+                                <div class="nav__menuHidden-img-block">
+                                    <img src="img/hidden_menu.png" alt="super sale">
+                                    <div class="nav__menuHidden-img-block-text">Super<br>sale!</div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            
+            </nav>
+
+    <div class="slider">
+        <div class="container slider__container">
+            <div class="slider__text">
+                <h2 class="slider__h2">THE BRAND</h2>
+                <h4 class="slider__h4">OF LUXERIOUS <span class="word">FASHION</span></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="offer">
+        <div class="offer__column-one">
+            <div class="offer__one">
+                <h2>HOT DEAL<br>
+                    <span>FOR MEN</span></h2>
+            </div>
+            <div class="offer__two">
+                <h2>LUXIROUS & trendy<br>
+                    <span>ACCESORIES</span></h2>
+                <img class="image" src="img/offer2.png" alt="offer2">
+            </div>
+        </div>
+        <div class="offer__column-two">
+            <div class="offer__three">
+                <h2>30% offer<br>
+                    <span>women</span></h2>
+            </div>
+            <div class="offer__four">
+                <h2>new arrivals<br>
+                    <span>for kids</span></h2>
+            </div>
+        </div>
+    </div>
+    <div class="items">
+        <h2>Fetured Items</h2>
+        <p>Shop for items based on what we featured in this week</p>
+    </div>
+
+  <!-- <div class="product-box container">
+        <div class="product">--> 
+           <products></products> 
+    <div class="buttonAll"><a href="#">Browse All Product</a></div>
+    <div class="container">
+        <div class="offer-two-parts">
+            <div class="offerBig">
+                <h2>30% <span>OFFER</span></h2>
+                <p>FOR WOMEN</p>
+            </div>
+            <div class="textOffer">
+                <div class="textImgs"><img alt="textImg" src="img/textOfferImg1.png">
+                    <img alt="textImg" src="img/textOfferImg2.png">
+                    <img alt="textImg" src="img/textOfferImg3.png"> </div>
+                <div class="texts"><div class="textOf">
+                    <h2>Free Delivery</h2>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </div>
+                <div class="textOf">
+                    <h2>Sales &amp; discounts</h2>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </div>
+                <div class="textOf">
+                    <h2>Quality assurance</h2>
+                    <p>Worldwide delivery on all. Authorit tively morph next-generation innov tion with extensive models.</p>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="subscribe">
+        <div class="container subscribe_container">
+            <div class="block1_subscribe"> <div class="block1__image">  
+                <img class="sub_foto" alt="subscribe_foto" src="img/subscribe_foto.png"></div> 
+                <div class="block1__info"><p class="about">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,
+                    a pulvinar purus condimentum a. Aliquam condimentum mattis neque sed pretium”</p>
+                <h4><span>Bin Burhan</span><br>
+                    Dhaka, Bd</h4></div>
+
+            </div>
+            <div class="block2_subscribe">
+                <h2><span>Subscribe</span><br>
+                    FOR OUR NEWLETTER AND PROMOTION</h2>
+                <input type="email" class="subscribe_form" placeholder="Enter Your Email" required>
+                <button class="buttonSubscribe" type="submit">Subscribe</button>
+            </div>
+        </div>
+    </div>
+    <div class="shop_map container">
+        <div class="brand_info"> <a href="#" class="logo"><img class="logo__img" src="img/logo.png" alt="logo">BRAN<span class="logo__d">D</span></a>
+            <p>Objectively transition extensive data rather than cross functional solutions. Monotonectally syndicate multidisciplinary materials before go forward benefits. Intrinsicly syndicate an expanded array of processes and cross-unit partnerships. <br><br>
+
+                Efficiently plagiarize 24/365 action items and focused infomediaries.
+                Distinctively seize superior initiatives for wireless technologies. <br>Dynamically optimize.
+
+            </p>
+        </div>
+        <nav class="company">
+            <h2>COMPANY</h2>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">How It Works</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <nav class="information">
+            <h2>INFORMATION</h2>
+            <ul>
+                <li><a href="#">Tearms &amp; Condition</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">How to Buy</a></li>
+                <li><a href="#">How to Sell</a></li>
+                <li><a href="#">Promotion</a></li>
+            </ul>
+        </nav>
+        <nav class="category">
+            <h2>SHOP CATEGORY</h2>
+            <ul>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Child</a></li>
+                <li><a href="#">Apparel</a></li>
+                <li><a href="#">Brows All</a></li>  
+            </ul>
+        </nav>
+    </div>
+    <footer class="footer">
+       <div class = "footer_info container">
+        <div class="copyright"><p>&copy;2017  Brand  All Rights Reserved.</p></div>
+        
+        <div class="social">
+            <div class="socialLink"> <a href="#"><i class="fab fa-facebook-f social__icon"></i></a></div>
+            <div class="socialLink"><a href="#"><i class="fab fa-twitter social__icon"></i></a></div>
+            <div class="socialLink"><a href="#"><i class="fab fa-linkedin-in social__icon"></i></a></div>
+            <div class="socialLink"><a href="#"><i class="fab fa-pinterest-p social__icon"></i></a></div>
+            <div class="socialLink"><a href="#"><i class="fab fa-google-plus-g social__icon"></i></a></div>
+        </div>
+        </div>
+    </footer>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
+<script src="js/ProductsComponent.js"></script>
+<script src="js/ErrorComp.js"></script>
+<script src="js/CartComponent.js"></script>
+<script defer src="js/main.js"></script>
+</body>
+
+</html>

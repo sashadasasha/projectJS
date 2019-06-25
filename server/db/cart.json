@@ -1,0 +1,20 @@
+{
+  "amount": 105,
+  "countGoods": 2,
+  "contents": [
+    {
+      "quantity": 1,
+      "id_product": 101,
+      "product_name": "Man Shirt",
+      "price": 100.00,
+      "img": "public/img/shirt1.jpg"
+    }, 
+    {
+      "quantity": 1,
+      "id_product": 102,
+      "product_name": "Woman Shirt",
+      "price": 120.00,
+      "img": "public/img/shirt2.jpg"
+    }
+  ]
+}

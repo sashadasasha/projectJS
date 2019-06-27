@@ -1,11 +1,12 @@
 Vue.component('products', {
     data(){
       return {
-          catalogUrl: `/catalogData.json`,
+          catalogUrl: `/server/db/products.json`,
           products: [],
           filtered: [],
       }
     },
+    props: ["amount"],
     methods: {
         filter(value){
             let regexp = new RegExp(value, 'i');
@@ -22,7 +23,7 @@ Vue.component('products', {
     },
     template: `<div class="product-box container">
         <product 
-        v-for="product of filtered" 
+        v-for="product of filtered.slice(0, amount)" 
         :key="product.id_product"
         :product="product">
         </product>
@@ -34,19 +35,8 @@ Vue.component('product', {
     <a href="single_page.html" class="product__link"> <img :src="product.img" :alt="product.product_name" class="product__img"></a>
             <div class="product__info">
             <a href="#"><p class="product__text">{{product.product_name}}</p></a>
-            <span class="product__price">{{product.price}}</span>
-                <button class="buy-btn product__add" @click="$root.$refs.cart.addProduct(product)"><img src="img/cart-white.svg" alt="cart add">add to cart</button>
+            <span class="product__price">&#36;{{product.price}}</span>
+                <button class="buy-btn product__add" @click ="$root.$refs.cart.addProduct(product)"><img src="img/cart-white.svg" alt="cart add">add to cart</button>
             </div>
         </div>`
 })
-
-// /* <div class="product-box container">
-// <div class="product">
-//     <a href="single_page.html" class="product__link"><img class="product__img" src="img/shirt1.jpg" alt="product"></a>
-//     <div class="product__info">
-//         <a href="#"><p class="product__text">Mango  People  T-shirt</p></a>
-//         <span class="product__price">$52.00</span>
-//     </div>
-//     <a href="#" class="product__add"><img src="img/cart-white.svg" alt="cart add">add to cart</a>
-// </div> */
-

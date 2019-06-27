@@ -1,98 +1,99 @@
 Vue.component('cart', {
-    data(){
-      return {
-          cartUrl: `/getBasket.json`,
-          cartItems: [],
-          showCart: false,
-          imgCart: `https://placehold.it/50x100`
-      }
+    data() {
+        return {
+            cartUrl: `/server/db/cart.json`,
+            cartItems: [],
+            showCart: false,
+        }
     },
     methods: {
-        addProduct(product){
+        addProduct(product) {
             let find = this.cartItems.find(el => el.id_product === product.id_product);
-            if(find){
-                this.$parent.putJson(`/api/cart/${find.id_product}`, {quantity: 1})
+            if (find) {
+                this.$parent.putJson(`/api/cart/${find.id_product}`, {
+                        quantity: 1
+                    })
                     .then(data => {
-                        if(data.result){
-                            find.quantity++
+                        if (data.result) {
+                            find.quantity++;
                         }
                     })
             } else {
-                let prod = Object.assign({quantity: 1}, product);
+                let prod = Object.assign({
+                    quantity: 1
+                }, product);
                 this.$parent.postJson(`/api/cart`, prod)
                     .then(data => {
-                        if(data.result){
+                        if (data.result) {
                             this.cartItems.push(prod);
                         }
                     })
             }
-
-            // this.$parent.getJson(`${API}/addToBasket.json`)
-            //     .then(data => {
-            //         if(data.result){
-            //             let find = this.cartItems.find(el => el.id_product === product.id_product);
-            //             if(find){
-            //                 find.quantity++
-            //             } else {
-            //                 let prod = Object.assign({quantity: 1}, product);
-            //
-            //             }
-            //         } else {
-            //             console.log('error!')
-            //         }
-            //     })
         },
-        remove(product){
-            if(product.quantity > 1){
-                this.$parent.putJson(`/api/cart/${product.id_product}`, {quantity: -1})
+
+        remove(product) {
+            if (product.quantity > 1) {
+                this.$parent.putJson(`/api/cart/${product.id_product}`, {
+                        quantity: -1
+                    })
                     .then(data => {
-                        if(data.result){
+                        if (data.result) {
                             product.quantity--;
                         }
                     })
             } else {
                 this.$parent.delJson(`/api/cart/${product.id_product}`)
                     .then(data => {
-                        if(data.result){
+                        if (data.result) {
                             this.cartItems.splice(this.cartItems.indexOf(product), 1);
                         }
                     })
             }
         },
-
-            // this.$parent.getJson(`${API}/deleteFromBasket.json`)
-            //     .then(data => {
-            //         if(data.result){
-            //             if(product.quantity > 1){
-            //                 product.quantity--
-            //             } else {
-            //                 this.cartItems.splice(this.cartItems.indexOf(product), 1);
-            //             }
-            //         } else {
-            //             console.log('error!')
-            //         }
-            //     })
-    
     },
-    mounted(){
+    mounted() {
         this.$parent.getJson(`/api/cart`)
             .then(data => {
-                for(let el of data.contents){
+                for (let el of data.contents) {
                     this.cartItems.push(el);
                 }
             });
     },
+    computed: {
+        totalCart() {
+            let total = 0;
+            for (let item of this.cartItems) {
+                total += item.quantity * item.price;
+            }
+            return total;
+        },
+        totalAmount() {
+            let total = 0;
+            for (let item of this.cartItems) {
+                total += item.quantity;
+            }
+
+            return total;
+
+        }
+    },
     template: `<div>
-<button class="btn-cart" type="button" @click="showCart = !showCart">Корзина</button>
-<div class="cart-block" v-show="showCart">
+<button class="btn-cart" type="button" @click="showCart = !showCart"><img src="img/cart.svg" alt="cart" class="cart__btn-img"></button>
+<div class="cart" v-show="showCart">
             <p v-if="!cartItems.length">Cart is empty</p>
             <cart-item 
             v-for="item of cartItems" 
             :key="item.id_product"
-            :img="imgCart"
+            :img="item.img"
             :cart-item="item"
             @remove="remove"></cart-item>
+            <div class="total-count"> <p class="cart__total-numbers">TOTAL</p> <p class=total-sum>$ {{totalCart}}</p></div>
+            <div class="cart__buttons">
+            <button class="cart__button"><a href="checkout.html">Checkout</a></button>
+            <button class="cart__button"><a href="cart.html">Go to cart</a></button>
         </div>
+        </div>   
+        <div class="cart__product-counter">{{ totalAmount }}</div>
 </div>`
 });
 
@@ -100,16 +101,20 @@ Vue.component('cart-item', {
     props: ['cartItem', 'img'],
     template: `<div class="cart-item" >
                 <div class="product-bio">
-                    <img :src="img" alt="Some image">
-                    <div class="product-desc">
-                        <p class="product-title">{{cartItem.product_name}}</p>
-                        <p class="product-quantity">Quantity: {{cartItem.quantity}}</p>
-                        <p class="product-single-price">$ {{cartItem.price}} each</p>
-                    </div>
+                    <img class="cart__img" :src="img" alt="Some image">
+                    
                 </div>
                 <div class="right-block">
-                    <p class="product-price">$ {{cartItem.quantity*cartItem.price}}</p>
-                    <button class="del-btn" @click="$emit('remove', cartItem)">&times;</button>
+                <div class="product-desc">
+                        <p class="cart__product-title">{{cartItem.product_name}}</p>
+                        <i class="fas fa-star star-cart"></i>
+                        <i class="fas fa-star star-cart"></i>
+                        <i class="fas fa-star star-cart"></i>
+                        <i class="fas fa-star star-cart"></i>
+                        <i class="fas fa-star star-cart"></i>
+                        <p class="product-quantity-single-price">{{cartItem.quantity}} x $ {{cartItem.price}}</p>
+                    </div>
+                    <button class="del-btn" @click="$emit('remove', cartItem)"><i class="fas fa-plus-circle"></i></button>
                 </div>
             </div>`
 })

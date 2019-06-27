@@ -16,24 +16,4 @@ app.get('/api/products', (req, res) => {
         }
     })
 });
-
-
-
-
-
-// app.get()
-// app.post()
-// app.put()
-// app.delete()
-
-// app.get('/', (req, res) => {
-//    res.send('Hello World!');
-// });
-// app.get('/api/users/:id', (req, res) => {
-//     // res.send(req.params.id);
-//     res.send(req.query);
-// });
-
-
-
 app.listen(3000, () => console.log('Listen on port 3000...'))

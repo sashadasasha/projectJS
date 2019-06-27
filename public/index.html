@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Brand Shop</title>
     <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
@@ -87,23 +87,10 @@
             <div class="header__right">
                     <div class="cart__container">
                             <div class="cart__link-container">
-                                <a href="cart.html" class="cart__link">
-                                    <img src="img/cart.svg" alt="cart" class="cart__btn-img">
-                                </a>
-                            </div>
-                            <div class="cart__product-counter">0</div>
-                            <div class="cart">
-                                <div class="cart__triangle"></div>
-                                <div class="cart__products"></div>
-                                <div class="cart__total">
-                                    <p>total</p>
-                                    <p class="cart__total-numbers">$00.00</p>
+                                <div class="cart__link">       
+                                <cart ref="cart"></cart>
                                 </div>
-                                <div class="cart__buttons">
-                                    <button class="cart__button"><a href="checkout.html">Checkout</a></button>
-                                    <button class="cart__button">Go to cart</button>
-                                </div>
-                            </div>
+                            </div>        
                         </div>
                 <a class="button" href="#">My Account</a>
             </div>
@@ -578,25 +565,25 @@
 
     <div class="offer">
         <div class="offer__column-one">
-            <div class="offer__one">
+            <a href="product.html" class="offer_link"><div class="offer__one">
                 <h2>HOT DEAL<br>
                     <span>FOR MEN</span></h2>
-            </div>
-            <div class="offer__two">
+            </div></a>
+            <a href="product.html" class="offer_link"><div class="offer__two">
                 <h2>LUXIROUS & trendy<br>
                     <span>ACCESORIES</span></h2>
                 <img class="image" src="img/offer2.png" alt="offer2">
-            </div>
+            </div></a>
         </div>
         <div class="offer__column-two">
-            <div class="offer__three">
+                <a href="product.html" class="offer_link"> <div class="offer__three">
                 <h2>30% offer<br>
                     <span>women</span></h2>
-            </div>
-            <div class="offer__four">
+            </div></a>
+            <a href="product.html" class="offer_link"><div class="offer__four">
                 <h2>new arrivals<br>
                     <span>for kids</span></h2>
-            </div>
+            </div></a>
         </div>
     </div>
     <div class="items">
@@ -604,9 +591,7 @@
         <p>Shop for items based on what we featured in this week</p>
     </div>
 
-  <!-- <div class="product-box container">
-        <div class="product">--> 
-           <products></products> 
+    <products ref="products" :amount="8"></products> 
     <div class="buttonAll"><a href="#">Browse All Product</a></div>
     <div class="container">
         <div class="offer-two-parts">

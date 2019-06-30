@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Brand Shop - product</title>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,400i,700i,900,900i" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
         crossorigin="anonymous">
@@ -87,14 +87,16 @@
             </div>
             <div class="header__right">
                 <div class="cart__container">
-                        <div class="cart__link">       
-                                <cart ref="cart"></cart>
-                                </div>
+                        <div class="cart__link-container">
+                            <div class="cart__link">       
+                            <cart ref="cart"></cart>
                             </div>
-                </div>
-                <a class="button" href="#">My Account</a>
-            </div>
+                        </div>        
+                    </div>
+            <a class="button" href="#">My Account</a>
         </div>
+            </div>
+        
     </header>
     <nav class="nav container">
         <ul class="nav__menu">
@@ -601,9 +603,9 @@
     <div class="prod__main container">
         <div class="prod__main__left">
             <div class="prod__main__menu">
-                <details class="product__details">
+               <details class="product__details" @click= "showDetail('category')">
                     <summary class="product__summary">
-                        Category<i class="fas fa-caret-up"></i>
+                        Category<div v-show="!isShowDetailsCategory"><i class="fas fa-caret-up"></i></div><div v-show="isShowDetailsCategory"><i class="fas fa-caret-down"></i></div>
                     </summary>
                     <ul class="summ">
                         <li>Accessories</li>
@@ -620,15 +622,15 @@
                         <li>T-Shirts</li>
                         <li>Tanks</li>
                     </ul>
-                </details>
-                <details class="product__details">
+                </details></button>
+                <details class="product__details" @click="showDetail('brand')">
                     <summary class="product__summary">
-                        Brands<i class="fas fa-caret-up"></i>
+                        Brands<div v-show="!isShowDetailsBrand"><i class="fas fa-caret-up"></i></div><div v-show="isShowDetailsBrand"><i class="fas fa-caret-down"></i></div>
                     </summary>
                 </details>
-                <details class="product__details">
+                <details class="product__details" @click="showDetail('design')">
                     <summary class="product__summary">
-                        Designer<i class="fas fa-caret-up"></i>
+                        Designer<div v-show="!isShowDetailsDesign"><i class="fas fa-caret-up"></i></div><div v-show="isShowDetailsDesign"><i class="fas fa-caret-down"></i></div>
                     </summary>
                 </details>
             </div>
@@ -654,19 +656,19 @@
                 </div>
             </div>
             <div class="product-box productImages">
-                    
+                <products ref="products" :amount="9"></products>
             </div>
-            <products ref="products" :amount="9"></products> 
+            
             <div class="subNav container">
                 <div class="pages">
-                    <a href="#" class="navLinks"><i class="far fa-angle-left"></i></a>
+                    <a href="#" class="navLinks"><i class="fas fa-angle-left"></i></a>
                     <a href="product.html" class="navLinks">1</a>
                     <a href="#" class="navLinks">2</a>
                     <a href="#" class="navLinks">3</a>
                     <a href="#" class="navLinks">4</a>
                     <a href="#" class="navLinks">5</a>
                     <a href="#" class="navLinks">6...20</a>
-                    <a href="#" class="navLinks"><i class="far fa-angle-right"></i></a>
+                    <a href="#" class="navLinks"><i class="fas fa-angle-right"></i></a>
                 </div>
                 <div class="buttonAllProd"><a class="buttonAllProd__text" href ="single_page.html">View All</a></div>
             </div>
@@ -753,7 +755,7 @@
             </div>
         </div>
     </footer>
-    </div>
+    </div></div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
 <script src="js/ProductsComponent.js"></script>

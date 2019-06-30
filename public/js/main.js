@@ -1,6 +1,11 @@
 
 const app = new Vue({
     el: '#app',
+    data: {
+        isShowDetailsBrand: false,
+        isShowDetailsCategory: false,
+        isShowDetailsDesign: false,
+    },
     methods: {
         getJson(url){
             return fetch(url)
@@ -40,6 +45,27 @@ const app = new Vue({
             })
                 .then(result => result.json())
                 .catch(error => this.$refs.error.setText(error));
+        },
+        showDetail(name) {
+            if (name === "category") {
+            if (this.isShowDetailsCategory) {
+                this.isShowDetailsCategory = false;
+              } else {
+                this.isShowDetailsCategory = true;
+              }
+            } else if (name === "brand") {
+                if (this.isShowDetailsBrand) {
+                    this.isShowDetailsBrand= false;
+                  } else {
+                    this.isShowDetailsBrand = true;
+                  }
+            } else {
+                if (this.isShowDetailsDesign) {
+                    this.isShowDetailsDesign= false;
+                  } else {
+                    this.isShowDetailsDesign = true;
+                  }
+            }
         },
     }
 })

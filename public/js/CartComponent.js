@@ -114,7 +114,71 @@ Vue.component('cart-item', {
                         <i class="fas fa-star star-cart"></i>
                         <p class="product-quantity-single-price">{{cartItem.quantity}} x $ {{cartItem.price}}</p>
                     </div>
-                    <button class="del-btn" @click="$emit('remove', cartItem)"><i class="fas fa-plus-circle"></i></button>
+                    <button class="del-btn" @click="$emit('remove', cartItem)"><i class="fas fa-times-circle"></i></button>
                 </div>
             </div>`
 })
+
+Vue.component ('big-cart', {
+    props: ['cartItems'],
+    methods: {
+        clearCart () {
+            this.$parent.delJson(`/api/cart/`, true)
+				.then(data => {
+					if (data.result === 1) {
+						this.cartItems.splice(0, this.cartList.length);
+					}
+				})
+        }
+    },
+    template: `<div><div class="big-cart-list">
+        <big-cart-item 
+            v-for="item of $root.$refs.cart.cartItems" 
+            :key="item.id_product"
+            :img="item.img"
+            :quantity="item.quantity"
+            :id="item.id_product"
+            :big-cart-item="item"
+            ></big-cart-item>
+            <div class="total-count"> <p class="cart__total-numbers">TOTAL</p> <p class=total-sum>$ {{$root.$refs.cart.totalCart}}</p></div>
+            </div>
+    </div>`
+})
+
+Vue.component('big-cart-item', {
+    props: ['bigCartItem', 'img'],
+    template: `<div><div class = "one-cart-prod"><div class="big-cart-item shopping-cart__product-block shopping-cart__product-block_wide" >
+                    <img class="cart__img shopping-cart__product-img" :src="img" alt="Some image">
+                        <div class="shopping-cart__product-text">
+                        <a href="single-page.html" class="shopping-cart__product-text-name">{{bigCartItem.product_name}}</a>
+                        <p class="shopping-cart__product-text-info">Color:
+                        <span class="shopping-cart__product-text-info-value">Red</span>
+                        </p>
+                        <p class="shopping-cart__product-text-info">Size:
+                        <span class="shopping-cart__product-text-info-value">XXL</span>
+                        </p>
+                        </div>
+                     </div>
+                     <div class="shopping-cart__product-block">
+                        <span class="shopping-cart__product-price">{{bigCartItem.price}}$</span>
+                     </div>
+                    <div class="shopping-cart__product-block">
+                        <form action="">
+                        <input type="number" min="1" v-model.number="bigCartItem.quantity" class="shopping-cart__product-quantity">
+                         </form>
+                     </div>
+                    <div class="shopping-cart__product-block">
+                        <span class="shopping-cart__product-delivery-cost">free</span>
+                    </div>
+                    <div class="shopping-cart__product-block">
+                        <span class="shopping-cart__product-subtotal">{{bigCartItem.quantity*bigCartItem.price}}$</span>
+                    </div>
+                    <div class="shopping-cart__product-block">
+                        <button class="shopping-cart__product-del-btn" @click="$root.$refs.cart.remove(bigCartItem)">
+                         <i class="fas fa-times-circle shopping-cart__product-del-cross"></i>
+                         </button>
+                    </div>
+                </div>
+            </div>`
+})
+

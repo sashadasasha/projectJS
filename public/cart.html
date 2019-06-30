@@ -11,7 +11,7 @@
 </head>
 
 <body>
-        <div id="app">
+    <div id="app">
     <header class="header">
         <div class="container header__container">
             <div class="header__left">
@@ -86,15 +86,17 @@
                 </form>
             </div>
             <div class="header__right">
-                    <div class="cart__container">
+                <div class="cart__container">
+                        <div class="cart__link-container">
                             <div class="cart__link">       
-                                    <cart ref="cart"></cart>
-                                    </div>
-                                </div>
+                            <cart ref="cart"></cart>
+                            </div>
+                        </div>        
                     </div>
-                <a class="button" href="#">My Account</a>
-            </div>
+            <a class="button" href="#">My Account</a>
         </div>
+            </div>
+        
     </header>
     <nav class="nav container">
 
@@ -607,7 +609,8 @@
             <h4 class="shopping-cart__product-block">Subtotal</h4>
             <h4 class="shopping-cart__product-block">ACTION</h4>
         </div>
-        <div class="shopping-cart__product">
+        <big-cart ref="bigCart"></big-cart>
+       <!--- <div class="shopping-cart__product">
             <div class="shopping-cart__product-block shopping-cart__product-block_wide">
                 <img src="img/cart1.jpg" alt="product 1" class="shopping-cart__product-img">
                 <div class="shopping-cart__product-text">
@@ -662,7 +665,7 @@
             <div class="shopping-cart__product-block">
                 <form action="#">
                     <label for="productId-2"></label>
-                    <input type="number" class="shopping-cart__product-quantity" id="productId-2">
+                    <input type="number" min="1" class="shopping-cart__product-quantity" id="productId-2">
                 </form>
             </div>
             <div class="shopping-cart__product-block">
@@ -715,7 +718,8 @@
         <div class="shopping-cart__btn-container">
             <button class="shopping-cart__btn">cLEAR SHOPPING CART</button>
             <button class="shopping-cart__btn">cONTINUE sHOPPING</button>
-        </div>
+        </div> --->
+    </div>
         <div class="form">
             <form action="#" class="form__box">
                 <h3 class="form__box-heading">Shipping Adress</h3>
@@ -832,6 +836,7 @@
             </div>
         </footer>
     </div>
+</div>
         <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 <script defer src="https://use.fontawesome.com/releases/v5.7.2/js/all.js" integrity="sha384-0pzryjIRos8mFBWMzSSZApWtPl/5++eIfzYmTgBBmXYdhvxPc+XcFEk+zJwDgWbP" crossorigin="anonymous"></script>
 <script src="js/ProductsComponent.js"></script>

@@ -3,11 +3,39 @@
     "countGoods": 2,
     "contents": [
         {
-            "quantity": -1,
+            "quantity": 2,
             "id_product": 102,
             "product_name": "Woman Shirt",
             "price": 120,
             "img": "/img/shirt2.jpg"
+        },
+        {
+            "quantity": 3,
+            "id_product": 101,
+            "product_name": "Man Shirt",
+            "price": 100,
+            "img": "/img/shirt1.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 106,
+            "product_name": "Man Jacket",
+            "price": 105,
+            "img": "/img/shirt6.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 107,
+            "product_name": "Trousers",
+            "price": 70,
+            "img": "/img/shirt7.jpg"
+        },
+        {
+            "quantity": 1,
+            "id_product": 104,
+            "product_name": "Dress",
+            "price": 80,
+            "img": "/img/shirt4.jpg"
         },
         {
             "quantity": 1,
@@ -17,18 +45,11 @@
             "img": "/img/shirt3.jpg"
         },
         {
-            "quantity": 2,
-            "id_product": 106,
-            "product_name": "Man Jacket",
-            "price": 105,
-            "img": "/img/shirt6.jpg"
-        },
-        {
-            "quantity": 2,
-            "id_product": 105,
-            "product_name": "Black Dress",
-            "price": 90,
-            "img": "/img/shirt5.jpg"
+            "quantity": 1,
+            "id_product": 108,
+            "product_name": "Briefs",
+            "price": 60,
+            "img": "/img/shirt8.jpg"
         }
     ]
 }

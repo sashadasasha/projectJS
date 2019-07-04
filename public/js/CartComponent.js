@@ -34,7 +34,7 @@ Vue.component('cart', {
         remove(product) {
             if (product.quantity > 1) {
                 this.$parent.putJson(`/api/cart/${product.id_product}`, {
-                        quantity: -1
+                        quantity: -1,
                     })
                     .then(data => {
                         if (data.result) {
@@ -89,8 +89,8 @@ Vue.component('cart', {
             @remove="remove"></cart-item>
             <div class="total-count"> <p class="cart__total-numbers">TOTAL</p> <p class=total-sum>$ {{totalCart}}</p></div>
             <div class="cart__buttons">
-            <button class="cart__button"><a href="checkout.html">Checkout</a></button>
-            <button class="cart__button"><a href="cart.html">Go to cart</a></button>
+            <a href="checkout.html"><button class="cart__button">Checkout</button></a>
+            <a href="cart.html"><button class="cart__button">Go to cart</button></a>
         </div>
         </div>   
         <div class="cart__product-counter">{{ totalAmount }}</div>
@@ -120,17 +120,6 @@ Vue.component('cart-item', {
 })
 
 Vue.component ('big-cart', {
-    props: ['cartItems'],
-    methods: {
-        clearCart () {
-            this.$parent.delJson(`/api/cart/`, true)
-				.then(data => {
-					if (data.result === 1) {
-						this.cartItems.splice(0, this.cartList.length);
-					}
-				})
-        }
-    },
     template: `<div><div class="big-cart-list">
         <big-cart-item 
             v-for="item of $root.$refs.cart.cartItems" 
@@ -140,8 +129,46 @@ Vue.component ('big-cart', {
             :id="item.id_product"
             :big-cart-item="item"
             ></big-cart-item>
-            <div class="total-count"> <p class="cart__total-numbers">TOTAL</p> <p class=total-sum>$ {{$root.$refs.cart.totalCart}}</p></div>
             </div>
+            <div class="shopping-cart__btn-container">
+                <button class="shopping-cart__btn" @click = "$root.$refs.cart.clearCart()">cLEAR SHOPPING CART</button>
+                <a href="/product.html"><button class="shopping-cart__btn">cONTINUE sHOPPING</button></a>
+             </div>
+             <div class="form">
+            <form action="#" class="form__box">
+                <h3 class="form__box-heading">Shipping Adress</h3>
+                <label for="country"></label>
+                <select name="country" id="country" class="form__box-input">
+                    <option value="Bangladesh">Bangladesh</option>
+                    <option value="Turkey">Turkey</option>
+                    <option value="Vietnam">Vietnam</option>
+                    <option value="India">India</option>
+                </select>
+                <label for="state"></label>
+                <input type="text" id="state" placeholder="State" class="form__box-input">
+                <label for="postcode"></label>
+                <input type="text" id="postcode" placeholder="Postcode / Zip" class="form__box-input">
+                <button class="form__box-btn">
+                    get a quote
+                </button>
+            </form>
+            <form action="#" class="form__box">
+                <h3 class="form__box-heading">coupon discount</h3>
+                <span class="form__box-span">Enter your coupon code if you have one</span>
+                <label for="couponCode"></label>
+                <input type="text" id="couponCode" placeholder="State" class="form__box-input">
+                <button class="form__box-btn">
+                    Apply coupon
+                </button>
+            </form>
+            <form action="#" class="form__box">
+                <div class="form-box__sum">
+                    <h4 class="form__sub-total">Sub total <span class="form__sub-total-sum">$ {{$root.$refs.cart.totalCart}}</span></h4>
+                    <h3 class="form__grand-total">GRAND TOTAL<span class="form__grand-total-sum">$ {{$root.$refs.cart.totalCart}}</span></h3>
+                </div>
+                <button class="form__checkout-btn">proceed to checkout</button>
+            </form>
+        </div>
     </div>`
 })
 

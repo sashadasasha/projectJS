@@ -10,7 +10,7 @@
             "img": "/img/shirt2.jpg"
         },
         {
-            "quantity": 3,
+            "quantity": 2,
             "id_product": 101,
             "product_name": "Man Shirt",
             "price": 100,
@@ -36,13 +36,6 @@
             "product_name": "Dress",
             "price": 80,
             "img": "/img/shirt4.jpg"
-        },
-        {
-            "quantity": 1,
-            "id_product": 103,
-            "product_name": "Man Jacket",
-            "price": 200,
-            "img": "/img/shirt3.jpg"
         }
     ]
 }
